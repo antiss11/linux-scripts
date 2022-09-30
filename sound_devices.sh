@@ -2,6 +2,7 @@
 
 # Variables PA_PORT_1, PA_PORT_2 and PA_SINK_NAME can be received from "pacmd list" command
 # and added as environment variables for example in ~/.bashrc file.
+# Do not forget disable 'Automute' in alsa settings
 
 ACTIVE_PORTS=$(pacmd list | grep 'active port')
 if [[ $ACTIVE_PORTS == *"$PA_PORT_1"* ]];
